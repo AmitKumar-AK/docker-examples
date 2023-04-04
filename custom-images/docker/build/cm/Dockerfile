@@ -5,7 +5,9 @@ ARG SXA_IMAGE
 ARG SPE_IMAGE
 ARG TOOLING_IMAGE
 ARG SOLUTION_IMAGE
+ARG HEADLESS_IMAGE
 
+FROM ${HEADLESS_IMAGE} as headless
 FROM ${SOLUTION_IMAGE} as solution
 FROM ${TOOLING_IMAGE} as tooling
 FROM ${SPE_IMAGE} as spe
@@ -28,6 +30,11 @@ COPY --from=sxa \module\cm\content .\
 COPY --from=sxa \module\tools \module\tools
 RUN C:\module\tools\Initialize-Content.ps1 -TargetPath .\; `
     Remove-Item -Path C:\module -Recurse -Force;
+
+COPY --from=headless C:\module\cm\content C:\inetpub\wwwroot
+COPY --from=headless C:\module\tools C:\module\tools
+RUN C:\module\tools\Initialize-Content.ps1 -TargetPath C:\inetpub\wwwroot; `
+  Remove-Item -Path C:\module -Recurse -Force;    
     
 # Copy solution website files
 COPY --from=solution \artifacts\website\ .\
