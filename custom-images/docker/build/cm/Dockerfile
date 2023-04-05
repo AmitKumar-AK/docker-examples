@@ -4,12 +4,14 @@ ARG BASE_IMAGE
 ARG SXA_IMAGE
 ARG SPE_IMAGE
 ARG TOOLING_IMAGE
+ARG MANAGEMENT_SERVICES_IMAGE
 ARG SOLUTION_IMAGE
 ARG HEADLESS_IMAGE
 
 FROM ${HEADLESS_IMAGE} as headless
 FROM ${SOLUTION_IMAGE} as solution
 FROM ${TOOLING_IMAGE} as tooling
+FROM ${MANAGEMENT_SERVICES_IMAGE} AS management_services
 FROM ${SPE_IMAGE} as spe
 FROM ${SXA_IMAGE} as sxa
 FROM ${BASE_IMAGE}
@@ -25,12 +27,16 @@ WORKDIR C:\inetpub\wwwroot
 # Add SPE module
 COPY --from=spe \module\cm\content .\
 
+# Copy the Sitecore Management Services Module
+COPY --from=management_services C:\module\cm\content C:\inetpub\wwwroot
+
 # Add SXA module
 COPY --from=sxa \module\cm\content .\
 COPY --from=sxa \module\tools \module\tools
 RUN C:\module\tools\Initialize-Content.ps1 -TargetPath .\; `
     Remove-Item -Path C:\module -Recurse -Force;
 
+# Copy and init the JSS / Headless Services Module
 COPY --from=headless C:\module\cm\content C:\inetpub\wwwroot
 COPY --from=headless C:\module\tools C:\module\tools
 RUN C:\module\tools\Initialize-Content.ps1 -TargetPath C:\inetpub\wwwroot; `
