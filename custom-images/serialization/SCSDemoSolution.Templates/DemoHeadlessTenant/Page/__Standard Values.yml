@@ -1,0 +1,40 @@
+﻿---
+ID: "99d762bd-994c-4449-9343-03a2b62f708d"
+Parent: "e1d5815a-9b1f-4232-a140-dfd2665f010d"
+Template: "e1d5815a-9b1f-4232-a140-dfd2665f010d"
+Path: /sitecore/templates/Project/DemoHeadlessTenant/Page/__Standard Values
+SharedFields:
+- ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
+  Hint: __Masters
+  Value: |
+    {E1D5815A-9B1F-4232-A140-DFD2665F010D}
+    {C14B6289-8AC2-439C-9E5B-40DE9F820C3F}
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20230524T093839Z
+    - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
+      Hint: __Owner
+      Value: |
+        sitecore\Admin
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "ef93ddc0-e7c1-41d3-89b5-c7cba0084425"
+    - ID: "98f37020-c33b-4168-b32f-8c1e6b8a03b1"
+      Hint: Title
+      Value: $name
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230524T093843Z

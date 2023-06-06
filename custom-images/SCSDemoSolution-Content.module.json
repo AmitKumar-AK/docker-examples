@@ -1,0 +1,30 @@
+{
+    "namespace": "SCSDemoSolution-Content",
+    "tags": ["content"],
+    "items": {
+        "includes": [
+            {
+                "name": "SCSDemoSolution.SiteContent",
+                "path": "/sitecore/content/DemoHeadlessTenant"
+            },
+            {
+                "name": "SCSDemoSolution.MediaLibrary",
+           
+                "path": "/sitecore/media library/Project/DemoHeadlessTenant"
+           
+            },
+            {
+                "name": "SCSDemoSolution.APIKey",
+           
+                "path": "/sitecore/system/Settings/Services/API Keys"
+           
+            },
+            {
+                "name": "SCSDemoSolution.RenderingHosts",
+           
+                "path": "/sitecore/system/Settings/Services/Rendering Hosts"
+           
+            }            
+        ]
+    }
+}

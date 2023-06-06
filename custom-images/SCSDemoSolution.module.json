@@ -1,0 +1,23 @@
+{
+    "namespace": "SCSDemoSolution.module",
+    "items": {
+        "includes": [
+            {
+                "name": "SCSDemoSolution.Layouts",
+                "path": "/sitecore/layout/Layouts/Project/DemoHeadlessTenant"
+            },
+            {
+                "name": "SCSDemoSolution.Placeholders",
+                "path": "/sitecore/layout/Placeholder Settings/Project/DemoHeadlessTenant"
+            },
+            {
+                "name": "SCSDemoSolution.Renderings",
+                "path": "/sitecore/layout/Renderings/Project/DemoHeadlessTenant"
+            },
+            {
+                "name": "SCSDemoSolution.Templates",
+                "path": "/sitecore/templates/Project/DemoHeadlessTenant"
+            }
+        ]
+    }
+}

@@ -42,6 +42,9 @@ COPY --from=headless C:\module\tools C:\module\tools
 RUN C:\module\tools\Initialize-Content.ps1 -TargetPath C:\inetpub\wwwroot; `
   Remove-Item -Path C:\module -Recurse -Force;    
     
+# Copy additinal files to container
+COPY ./Data/ /inetpub/wwwroot/
+    
 # Copy solution website files
 COPY --from=solution \artifacts\website\ .\
 
