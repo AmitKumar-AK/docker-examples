@@ -1,6 +1,7 @@
 {
     "namespace": "SCSDemoSolution-Content",
     "tags": ["content"],
+    "references": ["SCSDemoSolution.module"],
     "items": {
         "includes": [
             {
