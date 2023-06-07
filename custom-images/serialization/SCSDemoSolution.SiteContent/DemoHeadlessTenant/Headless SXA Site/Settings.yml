@@ -1,13 +1,13 @@
 ﻿---
-ID: "4489baf5-74b9-4666-b39e-543d564f9beb"
-Parent: "718383bb-b852-45b3-9489-bf01b5dbb7ea"
+ID: "dfaeb6da-b2ce-46b2-b37e-1916c750aa2f"
+Parent: "99fef9f5-7bee-4f13-8c2c-0138b20552e8"
 Template: "d1a7d33a-7c46-433e-93b4-8f62647dc1af"
-Path: /sitecore/content/DemoHeadlessTenant/sxawebsite/Settings
+Path: /sitecore/content/DemoHeadlessTenant/Headless SXA Site/Settings
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
 - ID: "0129da3f-8c86-4591-ae32-6ec923413923"
   Hint: DictionaryDomain
-  Value: "{69909B0D-D952-41E6-9C3F-A4BFFA2E3D84}"
+  Value: "{7DF0414E-F6B0-4A22-BB1C-E71699B02EE6}"
 - ID: "1172f251-dad4-4efb-a329-0c63500e4f1e"
   Hint: __Masters
   Value: "{C2DC4690-AF44-48C7-BB21-90D1AD246732}"
@@ -22,10 +22,10 @@ SharedFields:
   Value: "{7B59A1D4-3A4D-4786-8505-CE9A24ABCCA7}"
 - ID: "3e4f559f-8e59-4405-b50d-619811371f6c"
   Hint: Name
-  Value: sxawebsite
+  Value: Headless SXA Site
 - ID: "5764d2d4-724d-4313-a81b-9246c911faff"
   Hint: AppDatasourcesPath
-  Value: "{23C9DC8F-A585-4050-8FDE-F6E0EDEBCD1D}"
+  Value: "{67F74B46-4921-4A86-B74D-CA027AB3B0F8}"
 - ID: "5ca117eb-8782-4a4f-9f2f-30de31fc2e34"
   Hint: PlaceholdersPath
   Value: "{42F6A677-973C-4419-BCE3-6048B1BC850D}"
@@ -40,7 +40,7 @@ SharedFields:
   Value: http
 - ID: "a7bbad73-b933-49ff-95c8-1c269cb35e7c"
   Hint: DictionaryPath
-  Value: "{69909B0D-D952-41E6-9C3F-A4BFFA2E3D84}"
+  Value: "{7DF0414E-F6B0-4A22-BB1C-E71699B02EE6}"
 - ID: "af332c24-fe17-41e7-8caf-8e64c588fe72"
   Hint: EditingTheme
   Value: "{3BCAB9EF-1E4F-4C23-B452-783BB82AA686}"
@@ -66,18 +66,18 @@ Languages:
     Fields:
     - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
       Hint: __Created
-      Value: 20230524T094052Z
+      Value: 20230607T111655Z
     - ID: "52807595-0f8f-4b20-8d2a-cb71d28c6103"
       Hint: __Owner
       Value: |
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "3d6638e9-296b-4414-8542-e945598bf75a"
+      Value: "e69340a9-a74e-4b74-a9b2-6a8a698a0892"
     - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
       Hint: __Updated by
       Value: |
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230607T115343Z
+      Value: 20230607T114948Z

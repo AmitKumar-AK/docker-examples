@@ -1,0 +1,40 @@
+﻿---
+ID: "526d6045-ea57-4bd9-8645-ba45809bf577"
+Parent: "895e25c4-12b2-4b2c-8233-82f3b79eef53"
+Template: "bc71d442-3e4f-46ba-887c-746e54f9bb83"
+Path: "/sitecore/system/Settings/Services/Rendering Hosts/headless-sxa-site"
+Languages:
+- Language: en
+  Fields:
+  - ID: "b5e02ad9-d56f-4c41-a065-a133db87bdeb"
+    Hint: __Display name
+    Value: Headless SXA Site
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20220614T103029Z
+    - ID: "3121c257-53cf-464a-b736-98b418876057"
+      Hint: AppName
+      Value: Headless SXA Site
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\Admin
+    - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
+      Hint: __Revision
+      Value: "b7e01f8c-b971-43e8-a10d-ddb9b550b2ad"
+    - ID: "badd9cf9-53e0-4d0c-bcc0-2d784c282f6a"
+      Hint: __Updated by
+      Value: |
+        sitecore\Admin
+    - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
+      Hint: __Updated
+      Value: 20230607T115040Z
+    - ID: "e32c1801-79b3-4fc1-a9c4-3c6e6c2968ae"
+      Hint: ServerSideRenderingEngineApplicationUrl
+      Value: "http://localhost:3000"
+    - ID: "fc76919b-0d7c-4732-865d-2af795fb38a4"
+      Hint: ServerSideRenderingEngineEndpointUrl
+      Value: "http://localhost:3000/api/editing/render"
