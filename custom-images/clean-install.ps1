@@ -58,4 +58,8 @@ else {
     docker-compose up -d
 }
 
+Write-Host "Setup content......" -ForegroundColor Yello
+.\setupcontent.ps1
+
+
 Write-Host "***Setup completed successfully***" -ForegroundColor Green
