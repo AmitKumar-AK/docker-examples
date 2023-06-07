@@ -5,6 +5,9 @@ Template: "e1d5815a-9b1f-4232-a140-dfd2665f010d"
 Path: /sitecore/content/DemoHeadlessTenant/sxawebsite/Home
 BranchID: "45cf9f42-b3ac-4412-aab9-f8441c7e448e"
 SharedFields:
+- ID: "24171bf1-c0e1-480e-be76-4c0a1876f916"
+  Hint: Page Design
+  Value: "{79968878-5BD9-4AC4-B215-3D425E291FB3}"
 - ID: "f6d8a61c-2f84-4401-bd24-52d2068172bc"
   Hint: __Originator
   Value: "{F558BEC9-C602-4D7A-B9A1-D0411C946EA4}"
@@ -29,7 +32,7 @@ Languages:
         sitecore\Admin
     - ID: "8cdc337e-a112-42fb-bbb4-4143751e123f"
       Hint: __Revision
-      Value: "5388424e-8277-4d42-bb32-254c6ed3e240"
+      Value: "8ff94d1c-fed6-4022-94f6-0c60fe8b99fd"
     - ID: "98f37020-c33b-4168-b32f-8c1e6b8a03b1"
       Hint: Title
       Value: Headless SXA Demo Website
@@ -39,4 +42,4 @@ Languages:
         sitecore\Admin
     - ID: "d9cf14b1-fa16-4ba6-9288-e8a174d4d522"
       Hint: __Updated
-      Value: 20230524T112214Z
+      Value: 20230607T102226Z
