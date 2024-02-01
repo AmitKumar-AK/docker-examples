@@ -51,6 +51,7 @@
   <ItemGroup>
     <Content Include="App_Config\Include\DockerExamples.XConnect.config" />
     <None Include="App_Config\Include\zzz\sxawebsite.config.example" />
+    <Content Include="App_Config\Include\zzz\z.Sitecore.XA.JSS.Foundation.Presentation.config" />
     <None Include="Properties\PublishProfiles\DockerDeploy.pubxml" />
     <None Include="Web.config.xdt" />
   </ItemGroup>

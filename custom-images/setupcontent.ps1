@@ -86,33 +86,6 @@ catch {
 }
 
 
-# DEMO TEAM CUSTOMIZATION - Enable/Run/Disable init container
-if (-not $SkipInit) {
-    # Check for Sitecore Gallery
-    Import-Module PowerShellGet
-    $SitecoreGallery = Get-PSRepository | Where-Object { $_.SourceLocation -eq "https://sitecore.myget.org/F/sc-powershell/api/v2" }
-    if (-not $SitecoreGallery) {
-        Write-Host "Adding Sitecore PowerShell Gallery..." -ForegroundColor Green
-        Register-PSRepository -Name SitecoreGallery -SourceLocation https://sitecore.myget.org/F/sc-powershell/api/v2 -InstallationPolicy Trusted
-        $SitecoreGallery = Get-PSRepository -Name SitecoreGallery
-    }
-
-    $dockerToolsVersion = "10.2.7"
-    Remove-Module SitecoreDockerTools -ErrorAction SilentlyContinue
-    if (-not (Get-InstalledModule -Name SitecoreDockerTools -RequiredVersion $dockerToolsVersion -ErrorAction SilentlyContinue)) {
-        Write-Host "Installing SitecoreDockerTools..." -ForegroundColor Green
-        Install-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion -Scope CurrentUser -Repository $SitecoreGallery.Name
-    }
-    Write-Host "Importing SitecoreDockerTools..." -ForegroundColor Green
-    Import-Module SitecoreDockerTools -RequiredVersion $dockerToolsVersion
-
-    Write-Host "Running init container..." -ForegroundColor Green
-    Set-DockerComposeEnvFileVariable "INIT_CONTAINERS_COUNT" -Value 1
-    docker-compose up -d init
-    Set-DockerComposeEnvFileVariable "INIT_CONTAINERS_COUNT" -Value 0
-}
-# END CUSTOMIZATION
-
 Write-Host "Opening site..." -ForegroundColor Green
 
 

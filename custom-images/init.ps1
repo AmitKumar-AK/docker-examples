@@ -111,9 +111,16 @@ try {
             throw "Invalid mkcert.exe file"
         }
     }
+    #Write-Host "Generating Traefik TLS certificate..." -ForegroundColor Green
+    #& $mkcert -install
+    #& $mkcert -key-file key.pem -cert-file cert.pem "*.$($HostName).localhost"
+
     Write-Host "Generating Traefik TLS certificate..." -ForegroundColor Green
     & $mkcert -install
-    & $mkcert -key-file key.pem -cert-file cert.pem "*.$($HostName).localhost"
+    & $mkcert "*.$($HostName).localhost"
+
+    # stash CAROOT path for messaging at the end of the script
+    $caRoot = "$(& $mkcert -CAROOT)\rootCA.pem"    
 }
 catch {
     Write-Host "An error occurred while attempting to generate TLS certificate: $_" -ForegroundColor Red
@@ -132,5 +139,5 @@ Add-HostsEntry "cd.$($HostName).localhost"
 Add-HostsEntry "cm.$($HostName).localhost"
 Add-HostsEntry "id.$($HostName).localhost"
 Add-HostsEntry "hrz.$($HostName).localhost"
-
+Add-HostsEntry "www.$($HostName).localhost"
 Write-Host "Done!" -ForegroundColor Green
