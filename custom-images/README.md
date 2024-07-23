@@ -2,6 +2,18 @@
 
 Example solution for creating [custom Sitecore images](https://doc.sitecore.com/xp/en/developers/103/developer-tools/create-custom-sitecore-images.html), with recommended folder structure for container development.
 
+**This repository uses:**
+
+| Item  | Details |
+| ------------- | ------------- |
+| Sitecore Version  | **10.4**  |
+| Container Windows OS Version  | **10.0.17763.6054**  | 
+| Target OS  | **LTSC2019, LTSC2022**  |
+| Host OS Version  | **22H2(OS Build 19045.4170 or 10.0.19045)**  |
+| Hardware Abstraction Layer Version  | **10.0.19041.3636**  |
+
+
+
 Please follow below steps to setup this repository on your local system
 
 ## Steps

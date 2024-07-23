@@ -20,7 +20,8 @@ services:
     build:
       context: ./docker/build/redis
       args:
-        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}redis:3.2.100-${EXTERNAL_IMAGE_TAG_SUFFIX}
+        #BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}redis:3.2.100-${EXTERNAL_IMAGE_TAG_SUFFIX}
+        BASE_IMAGE: ${SITECORE_DOCKER_REGISTRY}redis:3.2.100
 
   mssql:
     mem_limit: 2GB
