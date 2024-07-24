@@ -77,7 +77,7 @@ services:
     build:
       context: ../../docker/build/redis
       args:
-        PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-redis:${SITECORE_VERSION}
+        PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}redis:3.2.100-${EXTERNAL_IMAGE_TAG_SUFFIX}
 
   # Mount our SQL data folder and use our custom image with the Headless Services (JSS)
   # module data added. See Dockerfile for details.
@@ -116,11 +116,11 @@ services:
   # Use our retagged Identity Server image.
   # Configure for a mounted license file instead of using SITECORE_LICENSE.
   id:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-id6:${VERSION:-latest}
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-id7:${VERSION:-latest}
     build:
       context: ../../docker/build/id
       args:
-        PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-id6:${SITECORE_VERSION}
+        PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-id7:${SITECORE_VERSION}
     volumes:
       - ${HOST_LICENSE_FOLDER}:c:\license
     environment:
