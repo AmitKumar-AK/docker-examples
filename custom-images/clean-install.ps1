@@ -58,4 +58,7 @@ else {
     docker-compose up -d
 }
 
+# Execute the Sitecore Identity Server 8 upgrade script
+.\execute-mssql-script.ps1 -filePath ".env"
+
 Write-Host "***Setup completed successfully***" -ForegroundColor Green
