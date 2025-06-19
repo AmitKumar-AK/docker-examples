@@ -4,7 +4,7 @@
 # Note that some of the overrides point to 'empty' Dockerfiles. This is recommended, even if
 # you are not customizing an image, to enable retagging and later customization. See Sitecore
 # Containers documentation for details.
-#
+# refer .env details at https://github.com/AmitKumar-AK/Sitecore-XM0-Topology/tree/feature/10-4-XM0-HEADLESS-SXA/run
 
 version: "2.4"
 
@@ -116,11 +116,11 @@ services:
   # Use our retagged Identity Server image.
   # Configure for a mounted license file instead of using SITECORE_LICENSE.
   id:
-    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-id7:${VERSION:-latest}
+    image: ${REGISTRY}${COMPOSE_PROJECT_NAME}-id8:${VERSION:-latest}
     build:
       context: ../../docker/build/id
       args:
-        PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-id7:${SITECORE_VERSION}
+        PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-identity:${SITECORE_ID_VERSION}
     volumes:
       - ${HOST_LICENSE_FOLDER}:c:\license
     environment:
@@ -136,7 +136,7 @@ services:
       args:
         PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp1-cd:${SITECORE_VERSION}
         SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
-        TOOLS_IMAGE: ${TOOLS_IMAGE}
+        TOOLS_IMAGE: ${SITECORE_TOOLS_REGISTRY}sitecore-docker-tools-assets:${TOOLS_VERSION}
         MANAGEMENT_SERVICES_IMAGE: ${MANAGEMENT_SERVICES_IMAGE}
         HEADLESS_SERVICES_IMAGE: ${HEADLESS_SERVICES_IMAGE}
     depends_on:
@@ -157,7 +157,7 @@ services:
       args:
         PARENT_IMAGE: ${SITECORE_DOCKER_REGISTRY}sitecore-xp1-cm:${SITECORE_VERSION}
         SOLUTION_IMAGE: ${REGISTRY}${COMPOSE_PROJECT_NAME}-solution:${VERSION:-latest}
-        TOOLS_IMAGE: ${TOOLS_IMAGE}
+        TOOLS_IMAGE: ${SITECORE_TOOLS_REGISTRY}sitecore-docker-tools-assets:${TOOLS_VERSION}
         MANAGEMENT_SERVICES_IMAGE: ${MANAGEMENT_SERVICES_IMAGE}
         HEADLESS_SERVICES_IMAGE: ${HEADLESS_SERVICES_IMAGE}
     depends_on:
